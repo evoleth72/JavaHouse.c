@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java House</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #FFB6C1;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid #F5A8B1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #E2DFD2;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFB6C1;
+        }
+
+        section {
+            padding: 3rem 2rem;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1200x600.png?text=Coffee+Shop+Hero+Image');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 10rem 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            background-color: #FF69B4;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #FFB6C1;
+        }
+
+        .bread-menu, .spices-flavors, .about, .contact, .coffee-menu {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+
+        .bread-menu h2, .spices-flavors h2, .about h2, .contact h2, .coffee-menu h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #FF69B4;
+        }
+
+        .bread-item, .spice-item, .coffee-item {
+            background-color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .bread-item:hover, .spice-item:hover, .coffee-item:hover {
+            transform: scale(1.05);
+        }
+
+        .bread-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .spices-flavors, .coffee-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .bread-item img, .spice-item img, .coffee-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .bread-item h3, .spice-item h3, .coffee-item h3 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            color: #FF69B4;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero a {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Java House</h1>
+        <p>Experience the Aroma</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#bread-menu">Bread Menu</a>
+        <a href="#spices-flavors">Spices & Flavors</a>
+        <a href="#coffee-menu">Coffee Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>We're thrilled to serve you!</h1>
+        <p>Our coffee products are tailored to ensure your satisfaction.</p>
+        <a href="#contact">Contact Us</a>
+    </section>
+
+    <!-- Bread Menu Section -->
+    <section id="bread-menu" class="bread-menu">
+        <h2>Our Bread & Pastries</h2>
+        <div class="bread-item">
+            <img src="https://via.placeholder.com/350x250.png?text=Croissant" alt="Croissant">
+            <h3>Classic Croissant</h3>
+            <p>Freshly baked, buttery, and flaky croissants.</p>
+        </div>
+        <div class="bread-item">
+            <img src="https://via.placeholder.com/350x250.png?text=Muffin" alt="Muffin">
+            <h3>Blueberry Muffin</h3>
+            <p>Soft and moist with bursts of fresh blueberries.</p>
+        </div>
+        <div class="bread-item">
+            <img src="https://via.placeholder.com/350x250.png?text=Bagel" alt="Bagel">
+            <h3>Plain Bagel</h3>
+            <p>A perfect balance of chewy and soft.</p>
+        </div>
+    </section>
+
+    <!-- Spices & Flavors Section -->
+    <section id="spices-flavors" class="spices-flavors">
+        <h2>Spices & Flavors</h2>
+        <div class="spice-item">
+            <h3>Chilli Flakes</h3>
+            <p>Spicy and aromatic for a flavorful kick.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Cardamom</h3>
+            <p>Sweet and fragrant, perfect for warming flavors.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Fennel</h3>
+            <p>Sweet, slightly licorice flavor.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Aniseed</h3>
+            <p>Licorice-like, sweet and aromatic.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Caraway</h3>
+            <p>Warm and slightly peppery, often used in pastries.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Cinnamon</h3>
+            <p>Sweet, warm, and comforting spice.</p>
+        </div>
+        <div class="spice-item">
+            <h3>Nutmeg</h3>
+            <p>Nutty, sweet, and aromatic for that perfect winter vibe.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>Our Story</h2>
+        <p>Founded in 2025, Java House was born out of a passion for bringing the rich, aromatic experience of coffee to coffee lovers everywhere. What started as a small, family-run business in Makati City, Metro Manila, has quickly become a beloved haven for coffee enthusiasts, offering premium blends and a cozy atmosphere for all who walk through our doors.</p>
+        
+        <p>At Java House, we believe that a cup of coffee is not just a drink; it's an experience that brings people together. From the moment we opened our doors, our mission has been simple: to provide a space where people can enjoy high-quality coffee and freshly baked goods in a welcoming environment. Whether you’re here to catch up with friends, work, or simply enjoy a quiet moment, Java House is your home away from home.</p>
+        
+        <p>Our commitment to quality is at the heart of everything we do. We source the finest beans from around the world and pair them with our selection of freshly baked pastries, all made with love and care. With a warm, inviting ambiance and a menu designed to satisfy every craving, we aim to create a place where people feel like they belong.</p>
+
+        <p>As we continue to grow, we remain dedicated to staying true to our roots — offering exceptional coffee and a unique experience that keeps our customers coming back. Thank you for being part of our journey. Here's to many more years of serving you the finest coffee in town!</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Address: Makati City, Metro Manila, Philippines</p>
+        <p>Phone: +1 (123) 489-7195</p>
+        <p>Email: @JavaHouse.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Java House. All rights reserved.</p>
+        <p>Address: Makati City, Metro Manila, Philippines</p>
+        <p>Phone: +1 (123) 489-7195</p>
+        <p>Email: @JavaHouse.com</p>
+    </footer>
+
+</body>
+</html>
+
+
